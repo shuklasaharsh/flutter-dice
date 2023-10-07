@@ -1,11 +1,12 @@
+import 'dart:math';
+
 import 'package:first_app/components/custom_column.dart';
+import 'package:first_app/components/dice_roller.dart';
 import 'package:flutter/material.dart';
 // import 'package:first_app/components/custom_text.dart';
 
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomLeft;
-
-void rollDice() {}
 
 /// GradeintContainer
 /// * Has a round container with gradient
@@ -33,35 +34,8 @@ class GradientContainer extends StatelessWidget {
           end: endAlignment, // end
         ),
       ),
-      child: Center(
-        child: CustomColumn(
-          [
-            Image.asset(
-              'assets/images/dice-1.png',
-              width: 200,
-            ),
-            SizedBox(
-              height: 100,
-              width: 140,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  backgroundColor: Colors.black38,
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                    bottom: 20,
-                  ),
-                ),
-                onPressed: rollDice,
-                child: const Text(
-                  'Roll Dice',
-                  style: TextStyle(fontSize: 28),
-                ),
-              ),
-            )
-          ],
-          MainAxisSize.min,
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }
