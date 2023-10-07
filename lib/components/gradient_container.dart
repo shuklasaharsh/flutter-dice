@@ -1,6 +1,3 @@
-import 'dart:math';
-
-import 'package:first_app/components/custom_column.dart';
 import 'package:first_app/components/dice_roller.dart';
 import 'package:flutter/material.dart';
 // import 'package:first_app/components/custom_text.dart';
